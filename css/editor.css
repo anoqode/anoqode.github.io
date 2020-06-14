@@ -23,6 +23,7 @@
     padding: 10px;
     border: solid 1px rgb(200, 200, 200);
     border-radius: 3px;
+    overflow-y: scroll;
 }
 
 #editor>div:not(:first-child) {
@@ -34,4 +35,8 @@
     background-color: rgb(245, 245, 245);
     border: none;
     border-radius: 3px;
+}
+
+#output pre>code {
+    padding: 0;
 }
