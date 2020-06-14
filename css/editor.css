@@ -9,6 +9,7 @@
     margin: 0;
     padding: 10px;
     border: solid 1px rgb(200, 200, 200);
+    border-radius: 3px;
     background-color: white;
     resize: none;
     font-size: 12pt;
@@ -21,8 +22,16 @@
     margin: 0;
     padding: 10px;
     border: solid 1px rgb(200, 200, 200);
+    border-radius: 3px;
 }
 
 #editor>div:not(:first-child) {
     margin-left: 20px;
+}
+
+#output pre {
+    padding: 8px 12px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+    border-radius: 3px;
 }

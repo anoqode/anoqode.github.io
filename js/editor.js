@@ -1,5 +1,15 @@
 function prepareEditor() {
-    var md = window.markdownit();
+    var md = window.markdownit({
+        highlight: function (str, lang) {
+            if (lang && hljs.getLanguage(lang)) {
+                try {
+                    return hljs.highlight(lang, str).value;
+                } catch (__) {}
+            }
+      
+            return ''; // use external default escaping
+        }
+    });
     var input = document.getElementById('input');
     var output = document.getElementById('output');
     
