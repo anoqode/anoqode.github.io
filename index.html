@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anoqode</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Yuta Koshizawa" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/editor.css" />
+    <script src="./lib/markdown-it.11.0.min.js"></script>
+    <script src="./js/editor.js"></script>
+    <script>
+    window.addEventListener('load', function() {
+        prepareEditor();
+    });
+    </script>
+</head>
+<body>
+    <header>
+        <h1><img id="logo" src="./img/logo.png" alt="Anoqode" /></h1>
+    </header>
+    <main>
+        <div id="editor">
+            <textarea id="input">
+*Anoqode* を使えば **匿名で** コーディングに関する質問をすることができます（※ 現在、本サービスは [Swift Zoomin' #3](https://swift-tweets.connpass.com/event/176665/) のために試験的に運用されています。）
+
+ここ（左側の枠の中）に、 [Markdown 形式](https://ja.wikipedia.org/wiki/Markdown)で質問を記述して下さい。右側にレンダリング結果が表示されます。
+
+もちろん、 *斜体* や **太字** による強調、 ~~打ち消し~~ なども使えますし、 `print("Anoqode")` のようにインラインでコードを書いたり、次のようにコードブロックを書くこともできます。
+
+```swift
+let anoqode = "Anoqode"
+for character in anoqode {
+	print(character)
+}
+```
+
+トリプルバッククォートの後ろに言語名（上記の例では swift ）を指定することで、上記コードのようにシンタックスハイライトを有効にすることができます。
+            </textarea>
+            <div id="output"></div>
+        </div>
+    </main>
+</body>
+</html>

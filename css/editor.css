@@ -1,0 +1,28 @@
+#editor {
+    display: flex;
+    height: 100%;
+}
+
+#input {
+    width: calc(50% - 5px - 10px * 2 - 1px * 2);
+    height: calc(100% - 1px * 2);
+    margin: 0;
+    padding: 10px;
+    border: solid 1px rgb(200, 200, 200);
+    background-color: white;
+    resize: none;
+    font-size: 12pt;
+    word-break: break-all;
+}
+
+#output {
+    width: calc(50% - 5px - 10px * 2 - 1px * 2);
+    height: calc(100% - 1px * 2);
+    margin: 0;
+    padding: 10px;
+    border: solid 1px rgb(200, 200, 200);
+}
+
+#editor>div:not(:first-child) {
+    margin-left: 20px;
+}
