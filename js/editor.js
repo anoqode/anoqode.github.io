@@ -55,6 +55,7 @@ function prepareEditor() {
     });
 
     sendButton.addEventListener('click', function(event) {
+        input.disabled = true;
         sendButton.disabled = true;
         var message = input.value;
         var xhr = new XMLHttpRequest();
@@ -62,13 +63,14 @@ function prepareEditor() {
         
         // Success
         xhr.onload = function(event) {
-            alert('[ERROR] 投稿に成功しました。'); // FIXME: 次行を実装したら取り除く
+            alert('✅ 投稿に成功しました。'); // FIXME: 次行を実装したら取り除く
             // TODO: 結果ページに遷移
         };
 
         // Failure
         xhr.onerror = function(event) {
-            alert('[ERROR] 投稿に失敗しました。');
+            alert('⛔ 投稿に失敗しました。');
+            input.disabled = false;
             sendButton.disabled = false;
         };
 
