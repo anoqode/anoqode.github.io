@@ -52,27 +52,27 @@ code {
     font-size: 12pt;
 }
 
-.send-button {
+.aq-send-button {
     border: none;
     border-radius: 3px;
     color: white;
     font-size: 12pt;
     font-weight: bold;
-    background-color: rgb(22, 160, 133);
+    background-color: rgb(41, 128, 185);
 }
 
-.send-button:hover {
-    background-color: rgb(26, 188, 156);
+.aq-send-button:hover {
+    background-color: rgb(52, 152, 219);
 }
 
-.send-button:active {
-    background-color: rgba(26, 188, 156, 0.6);
+.aq-send-button:active {
+    background-color: rgba(52, 152, 219, 0.6);
 }
 
-.send-button:disabled {
-    background-color: rgba(26, 188, 156, 0.6);;
+.aq-send-button:disabled {
+    background-color: rgba(52, 152, 219, 0.6);;
 }
 
-.send-button:focus {
+.aq-send-button:focus {
     outline: none;
 }

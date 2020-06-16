@@ -10,8 +10,9 @@ function prepareEditor() {
             return ''; // use external default escaping
         }
     });
-    var input = document.getElementById('input');
-    var output = document.getElementById('output');
+    var editor = document.getElementById('editor');
+    var input = editor.getElementsByClassName('aq-input')[0];
+    var output = editor.getElementsByClassName('aq-output')[0];
     
     function updateOutput() {
         var html = md.render(input.value);

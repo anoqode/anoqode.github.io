@@ -1,8 +1,21 @@
-#editor {
+#editor .aq-main {
     display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1em;
 }
 
-#input {
+#editor .aq-buttons {
+    width: 100%;
+    height: 2em;
+}
+
+#editor .aq-buttons .aq-send-button {
+    width: 100%;
+    height: 100%;
+}
+
+#editor .aq-input {
     width: calc(50% - 5px - 10px * 2 - 1px * 2);
     height: calc(100% - 10px * 2 - 1px * 2);
     margin: 0;
@@ -15,27 +28,23 @@
     word-break: break-all;
 }
 
-#output {
+#editor .aq-output {
     width: calc(50% - 5px - 10px * 2 - 1px * 2);
     height: calc(100% - 10px * 2 - 1px * 2);
-    margin: 0;
+    margin: 0 0 0 20px;
     padding: 10px;
     border: solid 1px rgb(200, 200, 200);
     border-radius: 3px;
     overflow-y: scroll;
 }
 
-#editor>div:not(:first-child) {
-    margin-left: 20px;
-}
-
-#output pre {
+#editor .aq-output pre {
     padding: 8px 12px;
     background-color: rgb(245, 245, 245);
     border: none;
     border-radius: 3px;
 }
 
-#output pre>code {
+#editor .aq-output pre>code {
     padding: 0;
 }

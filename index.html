@@ -23,9 +23,9 @@
         <h1><img id="logo" src="./img/logo.png" alt="Anoqode" /></h1>
     </header>
     <main>
-        <form action="https://us-central1-anoqode.cloudfunctions.net/add-question" method="POST">
-            <div id="editor">
-                <textarea id="input" name="message">
+        <div id="editor">
+            <div class="aq-main">
+                <textarea class="aq-input" name="message">
 *Anoqode* を使えば **匿名で** コーディングに関する質問をすることができます（※ 現在、本サービスは [Swift Zoomin' #3](https://swift-tweets.connpass.com/event/176665/) のために試験的に運用されています。）
 
 ここ（左側の枠の中）に書かれているこのテキストを削除し、 [Markdown 形式](https://ja.wikipedia.org/wiki/Markdown)で質問を記述して下さい。右側の枠内にレンダリング結果が表示されます。
@@ -41,12 +41,12 @@ for character in anoqode {
 
 トリプルバッククォートの後ろに言語名（上記の例では swift ）を指定することで、上記コードのようにシンタックスハイライトを有効にすることができます。
 </textarea>
-                <div id="output"></div>
+                <div class="aq-output"></div>
             </div>
-            <div class="buttons">
-                <input class="send-button" type="submit" value="投稿">
+            <div class="aq-buttons">
+                <button class="aq-send-button">投稿</button>
             </div>
-        </form>
+        </div>
     </main>
 </body>
 </html>
