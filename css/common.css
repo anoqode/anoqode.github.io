@@ -10,7 +10,7 @@ header {
     margin: 0;
     padding: 20px;
     height: calc(45px);
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(189, 195, 199);
 }
 
 header h1 {
@@ -50,4 +50,29 @@ code {
     border: none;
     border-radius: 3px;
     font-size: 12pt;
+}
+
+.send-button {
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 12pt;
+    font-weight: bold;
+    background-color: rgb(22, 160, 133);
+}
+
+.send-button:hover {
+    background-color: rgb(26, 188, 156);
+}
+
+.send-button:active {
+    background-color: rgba(26, 188, 156, 0.6);
+}
+
+.send-button:disabled {
+    background-color: rgba(26, 188, 156, 0.6);;
+}
+
+.send-button:focus {
+    outline: none;
 }

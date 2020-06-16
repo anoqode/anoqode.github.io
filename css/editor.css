@@ -1,11 +1,10 @@
 #editor {
     display: flex;
-    height: 100%;
 }
 
 #input {
     width: calc(50% - 5px - 10px * 2 - 1px * 2);
-    height: calc(100% - 1px * 2);
+    height: calc(100% - 10px * 2 - 1px * 2);
     margin: 0;
     padding: 10px;
     border: solid 1px rgb(200, 200, 200);
@@ -18,7 +17,7 @@
 
 #output {
     width: calc(50% - 5px - 10px * 2 - 1px * 2);
-    height: calc(100% - 1px * 2);
+    height: calc(100% - 10px * 2 - 1px * 2);
     margin: 0;
     padding: 10px;
     border: solid 1px rgb(200, 200, 200);
