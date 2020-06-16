@@ -13,6 +13,7 @@ function prepareEditor() {
     var editor = document.getElementById('editor');
     var input = editor.getElementsByClassName('aq-input')[0];
     var output = editor.getElementsByClassName('aq-output')[0];
+    var sendButton = editor.getElementsByClassName('aq-send-button')[0];
     
     function updateOutput() {
         var html = md.render(input.value);
@@ -51,6 +52,29 @@ function prepareEditor() {
             target.value = value.substring(0, start) + `\n` + indentation + value.substring(end);
             this.selectionStart = this.selectionEnd = start + 1 + indentation.length;
         }
+    });
+
+    sendButton.addEventListener('click', function(event) {
+        sendButton.disabled = true;
+        var message = input.value;
+        var xhr = new XMLHttpRequest();
+        var data = 'message=' + encodeURIComponent(message);
+        
+        // Success
+        xhr.onload = function(event) {
+            alert('[ERROR] 投稿に成功しました。'); // FIXME: 次行を実装したら取り除く
+            // TODO: 結果ページに遷移
+        };
+
+        // Failure
+        xhr.onerror = function(event) {
+            alert('[ERROR] 投稿に失敗しました。');
+            sendButton.disabled = false;
+        };
+
+        xhr.open('POST', 'https://us-central1-anoqode.cloudfunctions.net/add-question');
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.send(data);
     });
     
     updateOutput();
