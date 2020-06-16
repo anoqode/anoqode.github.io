@@ -27,8 +27,28 @@ function prepareEditor() {
             var end = this.selectionEnd;
 
             var target = event.target;
-            target.value = target.value.substring(0, start) + "\t" + target.value.substring(end);
+            target.value = target.value.substring(0, start) + '\t' + target.value.substring(end);
             this.selectionStart = this.selectionEnd = start + 1;
+        } else if (event.keyCode == 13) { // enter
+            event.preventDefault();
+
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+
+            var target = event.target;
+            var value = target.value;
+
+            var indentation = '';
+            for (var i = start - 1; i >= 0 && value.charAt(i) != '\n'; i--) {
+                if (value.charAt(i) == ' ' || value.charAt(i) == '\t') {
+                    indentation += value.charAt(i);
+                } else {
+                    indentation = '';
+                }
+            }
+
+            target.value = value.substring(0, start) + `\n` + indentation + value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1 + indentation.length;
         }
     });
     
