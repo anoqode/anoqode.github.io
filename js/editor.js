@@ -63,7 +63,7 @@ function prepareEditor() {
         
         // Success
         xhr.onload = function() {
-            var response = xhr.response;
+            var response = JSON.parse(xhr.response);
             if (response.success) {
                 window.location.href = './question?id=' + response.id;
             } else {
