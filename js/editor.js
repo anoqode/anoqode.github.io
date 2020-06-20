@@ -57,14 +57,20 @@ function prepareEditor() {
     sendButton.addEventListener('click', function(event) {
         input.disabled = true;
         sendButton.disabled = true;
-        var message = input.value;
+        var question = input.value;
         var xhr = new XMLHttpRequest();
-        var data = 'message=' + encodeURIComponent(message);
+        var data = 'question=' + encodeURIComponent(question);
         
         // Success
-        xhr.onload = function(event) {
-            alert('✅ 投稿に成功しました。'); // FIXME: 次行を実装したら取り除く
-            // TODO: 結果ページに遷移
+        xhr.onload = function() {
+            var response = xhr.response;
+            if (response.success) {
+                window.location.href = './question?id=' + response.id;
+            } else {
+                alert('⛔ 投稿に失敗しました。');
+                input.disabled = false;
+                sendButton.disabled = false;
+            }
         };
 
         // Failure
