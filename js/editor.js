@@ -74,7 +74,7 @@ function prepareEditor() {
             sendButton.disabled = false;
         };
 
-        xhr.open('POST', 'https://us-central1-anoqode.cloudfunctions.net/add-question');
+        xhr.open('POST', 'https://asia-northeast1-anoqode.cloudfunctions.net/add-question');
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.send(data);
     });
