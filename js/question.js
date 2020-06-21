@@ -37,8 +37,7 @@ window.addEventListener('load', function() {
         if (response.success) {
             var main = document.getElementsByTagName('main')[0];
             
-            var question = document.createElement('div');
-            question.className = 'aq-question';
+            var question = document.getElementsByClassName('aq-question')[0];
             var html = md.render(response.body);
             question.innerHTML = html;
 
