@@ -6,8 +6,6 @@
 
 $gap: $main-padding;
 
-$border-width: 1px;
-$io-padding: 10px;
 $buttons-height: 2em;
 
 #editor {
@@ -32,31 +30,31 @@ $buttons-height: 2em;
     }
 
     .aq-input {
-        width: calc(50% - #{$gap} / 2 - #{$io-padding} * 2 - #{$border-width} * 2);
-        height: calc(100% - #{$io-padding} * 2 - #{$border-width} * 2);
+        width: calc(50% - #{$gap} / 2 - #{$io-padding} * 2 - #{$io-border-width} * 2);
+        height: calc(100% - #{$io-padding} * 2 - #{$io-border-width} * 2);
         margin: 0;
         padding: $io-padding;
-        border: solid $border-width $editor-border-color;
-        border-radius: 3px;
+        border: solid $io-border-width $editor-border-color;
+        border-radius: $io-border-radius;
         resize: none;
         font-size: 12pt;
         word-break: break-all;
     }
 
     .aq-output {
-        width: calc(50% - #{$gap} / 2 - #{$io-padding} * 2 - #{$border-width} * 2);
-        height: calc(100% - #{$io-padding} * 2 - #{$border-width} * 2);
+        width: calc(50% - #{$gap} / 2 - #{$io-padding} * 2 - #{$io-border-width} * 2);
+        height: calc(100% - #{$io-padding} * 2 - #{$io-border-width} * 2);
         margin: 0 0 0 $gap;
         padding: $io-padding;
-        border: solid $border-width $editor-border-color;
-        border-radius: 3px;
+        border: solid $io-border-width $editor-border-color;
+        border-radius: $io-border-radius;
         overflow-y: scroll;
     
         pre {
             padding: 8px 12px;
             background-color: $code-background-color;
             border: none;
-            border-radius: 3px;
+            border-radius: $code-border-radius;
             
             &>code {
                 padding: 0;
