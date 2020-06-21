@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="/lib/highlight-js/default.min.css" />
     <link rel="stylesheet" href="/css/common.css?t={{ site.time | url_encode }}" />
     <link rel="stylesheet" href="/css/editor.css?t={{ site.time | url_encode }}" />
-    <link rel="stylesheet" href="/css/index.css?t={{ site.time | url_encode }}" />
+    {% for css in page.css %}
+    <link rel="stylesheet" href="/css/{{ css }}?t={{ site.time | url_encode }}" />
+    {% endfor %}
     <script src="/lib/highlight-js/highlight.min.js"></script>
     <script src="/lib/markdown-it/markdown-it.11.0.min.js"></script>
-    <script src="/js/editor.js?t={{ site.time | url_encode }}"></script>
-    <script>
-    window.addEventListener('load', function() {
-        prepareEditor();
-    });
-    </script>
+    {% for js in page.js %}
+    <script src="/js/{{ js }}?t={{ site.time | url_encode }}"></script>
+    {% endfor %}
 </head>
 <body>
     <header>
