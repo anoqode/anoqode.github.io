@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anoqode</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Yuta Koshizawa" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/lib/highlight-js/default.min.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/editor.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <script src="/lib/highlight-js/highlight.min.js"></script>
+    <script src="/lib/markdown-it/markdown-it.11.0.min.js"></script>
+    <script src="/js/editor.js"></script>
+    <script>
+    window.addEventListener('load', function() {
+        prepareEditor();
+    });
+    </script>
+</head>
+<body>
+    <header>
+        <h1><img id="logo" src="/img/logo.png" alt="Anoqode" /></h1>
+    </header>
+    <main>
+        {{content}}
+    </main>
+</body>
+</html>
