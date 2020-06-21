@@ -1,3 +1,6 @@
+---
+---
+
 html,body {
     margin: 0;
     padding: 0;
@@ -11,11 +14,11 @@ header {
     padding: 20px;
     height: calc(45px);
     background-color: rgb(189, 195, 199);
-}
-
-header h1 {
-    margin: 0;
-    padding: 0;
+    
+    h1 {
+       margin: 0;
+        padding: 0;
+    }
 }
 
 #logo {
@@ -59,20 +62,20 @@ code {
     font-size: 12pt;
     font-weight: bold;
     background-color: rgb(41, 128, 185);
-}
-
-.aq-send-button:hover {
+    
+    &:hover {
     background-color: rgb(52, 152, 219);
-}
+    }
+    
+    &:active {
+        background-color: rgba(52, 152, 219, 0.6);
+    }
 
-.aq-send-button:active {
-    background-color: rgba(52, 152, 219, 0.6);
-}
+    &:disabled {
+        background-color: rgba(52, 152, 219, 0.6);;
+    }
 
-.aq-send-button:disabled {
-    background-color: rgba(52, 152, 219, 0.6);;
-}
-
-.aq-send-button:focus {
-    outline: none;
+    &:focus {
+        outline: none;
+    }
 }
