@@ -3,6 +3,10 @@
 
 @import 'color';
 
+$border-width: 1px;
+$io-padding: 10px;
+$io-hrizontal-margin: 20px;
+
 #editor {
     .aq-main {
         display: flex;
@@ -22,11 +26,11 @@
     }
 
     .aq-input {
-        width: calc(50% - 5px - 10px * 2 - 1px * 2);
-        height: calc(100% - 10px * 2 - 1px * 2);
+        width: calc(50% - #{$io-hrizontal-margin} / 2 - #{$io-padding} * 2 - #{$border-width} * 2);
+        height: calc(100% - #{$io-padding} * 2 - #{$border-width} * 2);
         margin: 0;
-        padding: 10px;
-        border: solid 1px $editor-border-color;
+        padding: $io-padding;
+        border: solid $border-width $editor-border-color;
         border-radius: 3px;
         resize: none;
         font-size: 12pt;
@@ -34,11 +38,11 @@
     }
 
     .aq-output {
-        width: calc(50% - 5px - 10px * 2 - 1px * 2);
-        height: calc(100% - 10px * 2 - 1px * 2);
-        margin: 0 0 0 20px;
-        padding: 10px;
-        border: solid 1px $editor-border-color;
+        width: calc(50% - #{$io-hrizontal-margin} / 2 - #{$io-padding} * 2 - #{$border-width} * 2);
+        height: calc(100% - #{$io-padding} * 2 - #{$border-width} * 2);
+        margin: 0 0 0 $io-hrizontal-margin;
+        padding: $io-padding;
+        border: solid $border-width $editor-border-color;
         border-radius: 3px;
         overflow-y: scroll;
     

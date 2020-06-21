@@ -3,6 +3,10 @@
 
 @import 'color';
 
+$header-height: 45px;
+$header-padding: 20px;
+$main-padding: 20px;
+
 html,body {
     margin: 0;
     padding: 0;
@@ -13,8 +17,8 @@ html,body {
 
 header {
     margin: 0;
-    padding: 20px;
-    height: calc(45px);
+    padding: $header-padding;
+    height: $header-height;
     background-color: $theme-color;
     
     h1 {
@@ -24,14 +28,14 @@ header {
 }
 
 #logo {
-    height: 45px;
+    height: $header-height;
 }
 
 main {
-    width: calc(100% - 20px * 2);
-    height: calc(100% - (45px + 20px * 2 + 20px * 2));
+    width: calc(100% - #{$main-padding} * 2);
+    height: calc(100% - (#{$header-height} + #{$header-padding} * 2 + #{$main-padding} * 2));
     margin: 0;
-    padding: 20px;
+    padding: $main-padding;
 }
 
 textarea,pre {
