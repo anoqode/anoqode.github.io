@@ -81,3 +81,12 @@ code {
         outline: none;
     }
 }
+
+.aq-time time {
+    color: $time-color;
+    padding: $time-vertical-padding $time-horizontal-padding;
+    font-family: monospace;
+    font-weight: bold;
+    border: solid $time-border-width $time-color;
+    border-radius: calc((1em + #{$time-vertical-padding} * 2 + #{$time-border-width} * 2) / 2);
+}

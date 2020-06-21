@@ -13,6 +13,14 @@ function findGetParameter(name) {
     return result;
 }
 
+function twoDigits(value) {
+    if (value < 10) {
+        return '0' + value.toString();
+    } else {
+        return value.toString();
+    }
+}
+
 window.addEventListener('load', function() {
     var md = window.markdownit({
         highlight: function (str, lang) {
@@ -39,7 +47,20 @@ window.addEventListener('load', function() {
             
             var question = document.getElementsByClassName('aq-question')[0];
             var html = md.render(response.body);
-            question.innerHTML = html;
+            var date = new Date();
+            date.setTime(response.time);
+            question.innerHTML = '<div class="aq-time"><time>'
+                + date.getFullYear()
+                + '-'
+                + twoDigits(date.getMonth() + 1)
+                + '-'
+                + twoDigits(date.getDate())
+                + ' '
+                + twoDigits(date.getHours())
+                + ':'
+                + twoDigits(date.getMinutes())
+                + '</time></div>'
+                + html;
 
             main.appendChild(question);
         } else {
