@@ -2,10 +2,7 @@
 ---
 
 @import 'color';
-
-$header-height: 45px;
-$header-padding: 20px;
-$main-padding: 20px;
+@import 'layout';
 
 html,body {
     margin: 0;

@@ -2,22 +2,28 @@
 ---
 
 @import 'color';
+@import 'layout';
+
+$gap: $main-padding;
 
 $border-width: 1px;
 $io-padding: 10px;
-$io-hrizontal-margin: 20px;
+$buttons-height: 2em;
 
 #editor {
+    width: 100%;
+    height: 100%;
+
     .aq-main {
         display: flex;
         width: 100%;
-        height: 100%;
-        margin-bottom: 1em;
+        height: calc(100% - #{$gap} - #{$buttons-height});
+        margin-bottom: $gap;
     }
 
     .aq-buttons {
         width: 100%;
-        height: 2em;
+        height: $buttons-height;
 
         .aq-send-button {
             width: 100%;
@@ -26,7 +32,7 @@ $io-hrizontal-margin: 20px;
     }
 
     .aq-input {
-        width: calc(50% - #{$io-hrizontal-margin} / 2 - #{$io-padding} * 2 - #{$border-width} * 2);
+        width: calc(50% - #{$gap} / 2 - #{$io-padding} * 2 - #{$border-width} * 2);
         height: calc(100% - #{$io-padding} * 2 - #{$border-width} * 2);
         margin: 0;
         padding: $io-padding;
@@ -38,9 +44,9 @@ $io-hrizontal-margin: 20px;
     }
 
     .aq-output {
-        width: calc(50% - #{$io-hrizontal-margin} / 2 - #{$io-padding} * 2 - #{$border-width} * 2);
+        width: calc(50% - #{$gap} / 2 - #{$io-padding} * 2 - #{$border-width} * 2);
         height: calc(100% - #{$io-padding} * 2 - #{$border-width} * 2);
-        margin: 0 0 0 $io-hrizontal-margin;
+        margin: 0 0 0 $gap;
         padding: $io-padding;
         border: solid $border-width $editor-border-color;
         border-radius: 3px;
