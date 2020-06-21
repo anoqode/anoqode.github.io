@@ -1,6 +1,8 @@
 ---
 ---
 
+@import 'color';
+
 #editor {
     .aq-main {
         display: flex;
@@ -24,9 +26,8 @@
         height: calc(100% - 10px * 2 - 1px * 2);
         margin: 0;
         padding: 10px;
-        border: solid 1px rgb(200, 200, 200);
+        border: solid 1px $editor-border-color;
         border-radius: 3px;
-        background-color: white;
         resize: none;
         font-size: 12pt;
         word-break: break-all;
@@ -37,13 +38,13 @@
         height: calc(100% - 10px * 2 - 1px * 2);
         margin: 0 0 0 20px;
         padding: 10px;
-        border: solid 1px rgb(200, 200, 200);
+        border: solid 1px $editor-border-color;
         border-radius: 3px;
         overflow-y: scroll;
     
         pre {
             padding: 8px 12px;
-            background-color: rgb(245, 245, 245);
+            background-color: $code-background-color;
             border: none;
             border-radius: 3px;
             
