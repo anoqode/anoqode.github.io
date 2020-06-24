@@ -51,6 +51,16 @@ p {
 
 pre {
     margin: 0 0 1em 0;
+    padding: 8px 12px;
+    background-color: $code-background-color;
+    border: none;
+    border-radius: $code-border-radius;
+    overflow-x: scroll;
+    
+    &>code {
+        padding: 0;
+
+    }
 }
 
 code {

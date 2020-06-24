@@ -11,17 +11,6 @@
     padding: $io-padding;
     border: solid $io-border-width $editor-border-color;
     border-radius: $io-border-radius;
-
-    pre {
-        padding: 8px 12px;
-        background-color: $code-background-color;
-        border: none;
-        border-radius: $code-border-radius;
-        
-        &>code {
-            padding: 0;
-        }
-    }
 }
 
 .aq-time {

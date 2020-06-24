@@ -49,17 +49,6 @@ $buttons-height: 2em;
         border: solid $io-border-width $editor-border-color;
         border-radius: $io-border-radius;
         overflow-y: scroll;
-    
-        pre {
-            padding: 8px 12px;
-            background-color: $code-background-color;
-            border: none;
-            border-radius: $code-border-radius;
-            
-            &>code {
-                padding: 0;
-            }
-        }
     }
 }
 
