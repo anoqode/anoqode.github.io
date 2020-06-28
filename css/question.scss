@@ -4,10 +4,12 @@
 @import 'color';
 @import 'layout';
 
+$gap: $main-padding;
+
 .aq-question {
     width: 100%;
     max-width: 640px;
-    margin: 0 auto;
+    margin: 0 auto $gap auto;
     padding: $io-padding;
     border: solid $io-border-width $editor-border-color;
     border-radius: $io-border-radius;
