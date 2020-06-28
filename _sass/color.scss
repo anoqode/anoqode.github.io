@@ -1,9 +1,9 @@
 $theme-color: rgb(83, 92, 104); // WIZARD GREY https://flatuicolors.com/palette/au
 $accent-color: rgb(255, 63, 52); // RED ORANGE https://flatuicolors.com/palette/se
 $code-background-color: rgb(245, 245, 245);
-$editor-border-color: rgb(200, 200, 200);
+$editor-border-color: $theme-color;
 
-$time-color: rgb(127, 140, 141);
+$time-color: $theme-color;
 
 $button-color: $accent-color;
 $button-hover-color: rgba($button-color, 0.8);
