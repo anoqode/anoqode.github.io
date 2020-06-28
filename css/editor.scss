@@ -6,7 +6,7 @@
 
 $gap: $main-padding;
 
-$buttons-height: 2em;
+$buttons-height: 2.5em;
 
 #editor {
     width: 100%;
@@ -21,11 +21,13 @@ $buttons-height: 2em;
 
     .aq-buttons {
         width: 100%;
-        height: $buttons-height;
+        text-align: center;
 
         .aq-send-button {
             width: 100%;
-            height: 100%;
+            height: $buttons-height;
+            max-width: 300px;
+            border-radius: $buttons-height / 2;
         }
     }
 

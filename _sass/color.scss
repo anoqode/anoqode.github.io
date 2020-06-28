@@ -1,11 +1,10 @@
-// https://flatuicolors.com/palette/defo
-$theme-color: rgb(189, 195, 199);
-$accent-color: rgb(41, 128, 185);
+$theme-color: rgb(83, 92, 104); // WIZARD GREY https://flatuicolors.com/palette/au
+$accent-color: rgb(255, 63, 52); // RED ORANGE https://flatuicolors.com/palette/se
 $code-background-color: rgb(245, 245, 245);
 $editor-border-color: rgb(200, 200, 200);
 
 $time-color: rgb(127, 140, 141);
 
 $button-color: $accent-color;
-$button-hover-color: rgb(52, 152, 219);
-$button-disabled-color: rgba(52, 152, 219, 0.6);
+$button-hover-color: rgba($button-color, 0.8);
+$button-disabled-color: rgba($button-color, 0.6);
